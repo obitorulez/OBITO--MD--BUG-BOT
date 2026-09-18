@@ -1,4 +1,4 @@
-FROM node:lts-buster
+FROM node:lts-bullseye
 
 RUN apt-get update && \
   apt-get install -y \
@@ -13,8 +13,5 @@ COPY package.json .
 RUN npm install
 
 COPY . .
-
-
-CMD ["node", "."]
 
 CMD ["node", "."]
